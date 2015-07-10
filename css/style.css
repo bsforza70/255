@@ -45,6 +45,15 @@
 #circle:hover {
 	cursor: pointer;
 }
+#circle::focus {
+	outline:0 !important;   
+	background-image: none !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+     -moz-box-shadow: none !important;
+ }
+
 .displayscore {
 	position: absolute;
 	top: 50px;
