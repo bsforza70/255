@@ -1,5 +1,5 @@
 *:focus {
-  outline: none;
+  outline: none !important;
   background-image: none !important;
   outline: 0 !important;
   -webkit-box-shadow: none !important;
@@ -45,10 +45,9 @@
 #circle:hover {
 	cursor: pointer;
 }
-#circle::focus {
-	outline:0 !important;   
+#circle::focus { 
 	background-image: none !important;
-  outline: 0 !important;
+  outline: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
      -moz-box-shadow: none !important;
