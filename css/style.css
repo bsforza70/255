@@ -21,7 +21,7 @@
 	position: relative;
 }
 #circle {
-	background-color: rgba(0,0,0,0.05);
+	background-color: rgba(0,0,0,0);
 	height: 50px;
 	width: 50px;
 	border-radius: 25px;

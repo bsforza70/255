@@ -85,7 +85,7 @@ function gameover() {
 		clearInterval(colorchangeinterval);
 		document.getElementById("gameoverdisplay").style.display = "initial";
 		document.getElementById("scoreendgame").innerHTML = "Score: " + score;
-		document.getElementById("circle").style.backgroundColor = "rgba(0,0,0,0.05)";
+		document.getElementById("circle").style.backgroundColor = "rgba(0,0,0,0)";
 		gamestarted = false;
 	}
 }
