@@ -1,0 +1,161 @@
+#cont {
+	background-color: rgb(255,255,255);
+	text-align: center;
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+}
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+#circle {
+	background-color: rgba(0,0,0,0.05);
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	position: absolute;
+	top: calc(100vh * 0.6);
+	left: calc(100vw * 0.3);
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	z-index: 11 !important;
+}
+#circle:hover {
+	cursor: pointer;
+}
+.displayscore {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	color: white;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 700;
+	font-family: 'Raleway', sans-serif;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+/*#displayscore {
+	top: 50px;
+}*/
+#gameoverdisplay {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	-webkit-transition: display 1s;
+	-moz-transition: display 1s;
+	transition: display 1s;
+	position: absolute;
+	top:0;
+	display: none;
+}
+#gamestartdisplay {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+	-webkit-transition: display 1s;
+	-moz-transition: display 1s;
+	transition: display 1s;
+	position: absolute;
+	top:0;
+	z-index: 10;
+}
+.btn {
+	padding: 20px;
+	background-color: #fff;
+	color: #000;
+	border: solid black 1px;
+	font-family: 'Raleway', sans-serif;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.btn:hover {
+	background-color: #000;
+	color: #fff;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.start {
+	margin-top: 5vh;
+}
+#title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 100px;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+#helptext {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin: 4vw;
+}
+#scoreendgame {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	margin: 4vw;
+	margin-bottom: 5vh;
+}
+#links {
+	position: absolute;
+	text-align: center;
+	bottom: 30px;
+	width: 100vw;
+}
+#links a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Raleway', sans-serif;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
