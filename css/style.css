@@ -39,8 +39,8 @@
 }
 .displayscore {
 	position: absolute;
-	top: 0;
-	right: 5px;
+	top: 50px;
+	right: 50px;
 	color: white;
 	height: 50px;
 	width: 50px;
