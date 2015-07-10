@@ -53,7 +53,7 @@ function colorchangetoblack() {
 		runningcolors = colorchangetowhite;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 2;
+		delay = delay - 4;
 		//document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
@@ -71,7 +71,7 @@ function colorchangetowhite() {
 		runningcolors = colorchangetoblack;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 2;
+		delay = delay - 4;
 		//document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
