@@ -1,8 +1,10 @@
 *:focus {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  outline: none;
+  background-image: none !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+     -moz-box-shadow: none !important;
 }
 #cont {
 	background-color: rgb(255,255,255);
@@ -33,6 +35,12 @@
 	transition: all 0.1s;
 	z-index: 11 !important;
 	transform: translate3d(0,0,0);
+	  outline: none;
+  background-image: none !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+     -moz-box-shadow: none !important;
 }
 #circle:hover {
 	cursor: pointer;
