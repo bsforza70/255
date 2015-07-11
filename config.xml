@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.catch255.games"
-        versionCode = "17" 
-        version     = "0.1.17" >
+        versionCode = "18" 
+        version     = "0.1.18" >
 
     <name>255</name>
 
@@ -17,6 +17,7 @@
 
     <preference name="permissions"                value="none"/>
 
+    <preference name="SplashScreen"               value="none"/>            <!-- Should disable default cordova splash screen... -->
     <preference name="DisallowOverscroll"         value="true" />           <!-- true disables the overscroll on ios devices. false allows. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
