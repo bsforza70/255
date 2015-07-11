@@ -3,7 +3,8 @@ var score = 0;
 var delay = 60;
 var necscore = 10;
 var col = 255;
-setInterval(change, 3000);
+var delaychange = 3000;
+var changeplease = window.setInterval(change, delaychange);
 var runningcolors = colorchangetoblack;
 var gamestarted = false;
 var colorchangeinterval;
@@ -21,6 +22,9 @@ function gamestart() {
 	delay = 60;
 	col = 255;
 	gamestarted = true;
+	delaychange = 3000;
+	clearInterval(changeplease);
+	var changeplease = window.setInterval(change, delaychange);
 	document.getElementById("displayscore").innerHTML = tempscore;
 	document.getElementById("displaytotalscore").innerHTML = score;
 	document.getElementById("cont").style.backgroundColor = "rgb(" + col + "," + col + "," + col + ")"
@@ -54,11 +58,14 @@ function colorchangetoblack() {
 	document.getElementById("cont").style.backgroundColor = "rgb(" + col + "," + col + "," + col + ")"
 	if (col <= 0 && tempscore >= necscore) {
 		clearInterval(colorchangeinterval);
+		clearInterval(changeplease);
+		delaychange = delaychange - 100;
+		changeplease = window.setInterval(change, delaychange);
 		document.getElementById("circle").style.backgroundColor = "#fff";
 		runningcolors = colorchangetowhite;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 5;
+		delay = delay - 3;
 		document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
@@ -72,11 +79,14 @@ function colorchangetowhite() {
 	document.getElementById("cont").style.backgroundColor = "rgb(" + col + "," + col + "," + col + ")"
 	if (col >= 255 && tempscore >= necscore) {
 		clearInterval(colorchangeinterval);
+		clearInterval(changeplease);
+		delaychange = delaychange - 100;
+		changeplease = window.setInterval(change, delaychange);
 		document.getElementById("circle").style.backgroundColor = "#000";
 		runningcolors = colorchangetoblack;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 5;
+		delay = delay - 3;
 		document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
@@ -88,6 +98,7 @@ function colorchangetowhite() {
 function gameover() {
 	if (gamestarted == true) {
 		clearInterval(colorchangeinterval);
+		clearInterval(changeplease)
 		document.getElementById("gameoverdisplay").style.display = "initial";
 		document.getElementById("scoreendgame").innerHTML = "Score: " + score;
 		document.getElementById("circle").style.backgroundColor = "rgba(0,0,0,0)";
