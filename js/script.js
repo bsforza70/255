@@ -8,6 +8,11 @@ var runningcolors = colorchangetoblack;
 var gamestarted = false;
 var colorchangeinterval;
 
+
+$('#circle').bind('tap', function(e) {
+ 	scoreadd();
+});                       
+
 function gamestart() {
 	document.getElementById("gamestartdisplay").style.display = "none";
 	document.getElementById("gameoverdisplay").style.display = "none";
@@ -53,7 +58,7 @@ function colorchangetoblack() {
 		runningcolors = colorchangetowhite;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 4;
+		delay = delay - 5;
 		//document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
@@ -71,7 +76,7 @@ function colorchangetowhite() {
 		runningcolors = colorchangetoblack;
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
-		delay = delay - 4;
+		delay = delay - 5;
 		//document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
