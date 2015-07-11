@@ -21,7 +21,7 @@ function gamestart() {
 	delay = 60;
 	col = 255;
 	gamestarted = true;
-	//document.getElementById("displayscore").innerHTML = tempscore;
+	document.getElementById("displayscore").innerHTML = tempscore;
 	document.getElementById("displaytotalscore").innerHTML = score;
 	document.getElementById("cont").style.backgroundColor = "rgb(" + col + "," + col + "," + col + ")"
 	document.getElementById("circle").style.backgroundColor = "#000";
@@ -44,7 +44,7 @@ function change() {
 function scoreadd() {
 	tempscore++;
 	score++;
-	//document.getElementById("displayscore").innerHTML = tempscore;
+	document.getElementById("displayscore").innerHTML = tempscore;
 	document.getElementById("displaytotalscore").innerHTML = score;
 	change();
 }
@@ -59,7 +59,7 @@ function colorchangetoblack() {
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
 		delay = delay - 5;
-		//document.getElementById("displayscore").innerHTML = tempscore;
+		document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
 	else if (col <= 0 && tempscore < necscore) {
@@ -77,7 +77,7 @@ function colorchangetowhite() {
 		colorchangeinterval = window.setInterval(runningcolors, delay)
 		tempscore = 0;
 		delay = delay - 5;
-		//document.getElementById("displayscore").innerHTML = tempscore;
+		document.getElementById("displayscore").innerHTML = tempscore;
 		document.getElementById("displaytotalscore").innerHTML = score;
 	}
 	else if (col >= 255 && tempscore < necscore) {
