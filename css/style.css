@@ -42,7 +42,7 @@
 }
 
 .displayscore {
-	position: static;
+	position: absolute;
 	color: white;
 	height: 50px;
 	width: 50px;
@@ -54,7 +54,10 @@
 	text-shadow: 0px 2px #000;
 }
 #displayscore {
-	top: 50px;
+	right: 10px;
+}
+#displaytotalscore {
+	left: 10px;
 }
 #gameoverdisplay {
 	width: 100vw;
