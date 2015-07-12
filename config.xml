@@ -34,6 +34,7 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
     <gap:splash src="Defaultsplash.png" gap:platform="ios" />
+    <gap:splash src="Default-568h@2x.png" gap:platform="ios" height="1136" width="640"/>
 
     <icon src="favicons/appicon/sizes/appicon-320.png" />
 
