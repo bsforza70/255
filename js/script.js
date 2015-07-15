@@ -10,7 +10,7 @@ var gamestarted = false;
 var colorchangeinterval;
 
 
-$('#circle').bind('tap', function(e) {
+$('#circle').bind('tapstart', function(e) {
  	scoreadd();
 });                       
 
