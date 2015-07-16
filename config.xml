@@ -36,6 +36,13 @@
     <gap:splash src="Defaultsplash.png" gap:platform="ios" />
     <gap:splash src="Default-568h@2x.png" gap:platform="ios" height="1136" width="640"/>
 
+    <gap:splash src="favicons/android/images/res-long-port-ldpi/default.png" gap:platform="android" gap:qualifier="ldpi" />
+    <gap:splash src="favicons/android/images/res-long-port-mdpi/default.png" gap:platform="android" gap:qualifier="mdpi" />
+    <gap:splash src="favicons/android/images/res-long-port-hdpi/default.png" gap:platform="android" gap:qualifier="hdpi" />
+    <gap:splash src="favicons/android/images/res-long-port-xhdpi/default.png" gap:platform="android" gap:qualifier="xhdpi" />
+    <gap:splash src="favicons/android/images/res-long-port-xxhdpi/default.png" gap:platform="android" gap:qualifier="fr-xhdpi" />
+    <gap:splash src="favicons/android/images/res-long-port-xxhdpi/default.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
+
     <icon src="favicons/appicon/sizes/appicon-320.png" />
 
     <icon src="favicons/appicon/android/ic_launcher_appicon/drawable-ldpi/ic_launcher_appicon.png"   gap:platform="android"    gap:qualifier="ldpi" />
