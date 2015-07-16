@@ -3,11 +3,12 @@ var score = 0;
 var necscore = 10;
 var delaychange = 3000;
 var delaycolchange = 12000;
-var changeplease = window.setInterval(change, delaychange);
+var changeplease = setInterval(function(){change()}, delaychange);
 var gamestarted = false;
 var colist = ['white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor(),'white', randomcolor()]
 //'#'+Math.floor(Math.random()*16777215).toString(16)
 var colcount = 2;
+var logcount = 0;
 
 function randomcolor() {
 	return '#'+Math.floor(Math.random()*16777215).toString(16)
@@ -26,7 +27,7 @@ function gamestart() {
 	delaychange = 3000;
 	delaycolchange = 12000;
 	clearInterval(changeplease);
-	var changeplease = window.setInterval(change, delaychange);
+	changeplease = setInterval(function(){change()}, delaychange);
 	document.getElementById("displayscore").innerHTML = tempscore;
 	document.getElementById("displaytotalscore").innerHTML = score;
 	document.getElementById("cont").style.backgroundColor = colist[0]
@@ -45,7 +46,7 @@ function colchange() {
 		delaycolchange = delaycolchange - 250;
 		tempscore = 0;
 		document.getElementById("displayscore").innerHTML = tempscore;
-		var changeplease = window.setInterval(change, delaychange);
+		changeplease = setInterval(function(){change()}, delaychange);
 	}
 	else if (colcount <= colist.length && tempscore <= necscore){
 		gameover();
@@ -53,6 +54,8 @@ function colchange() {
 }
 
 function change() {
+	console.log(logcount)
+	logcount++;
 	var randPositionTop = (Math.random() * (0.95 - 0.01) + 0.01 ).toFixed(4)
 	var randPositionLeft = (Math.random() * (0.95 - 0.01) + 0.01 ).toFixed(4)
 	var randSize = (Math.random() * (1 - 0.25) + 0.25 ).toFixed(4)
