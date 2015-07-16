@@ -40,9 +40,9 @@ function colchange() {
 		document.getElementById("circle").style.backgroundColor = colist[colcount];
 		colcount++;
 		$('#cont').animate({backgroundColor: colist[colcount - 1]}, delaycolchange, colchange);
+		clearInterval(changeplease);
 		delaychange = delaychange - 50;
 		delaycolchange = delaycolchange - 250;
-		clearInterval(changeplease);
 		tempscore = 0;
 		document.getElementById("displayscore").innerHTML = tempscore;
 		var changeplease = window.setInterval(change, delaychange);
@@ -56,8 +56,8 @@ function change() {
 	var randPositionTop = (Math.random() * (0.95 - 0.01) + 0.01 ).toFixed(4)
 	var randPositionLeft = (Math.random() * (0.95 - 0.01) + 0.01 ).toFixed(4)
 	var randSize = (Math.random() * (1 - 0.25) + 0.25 ).toFixed(4)
-	document.getElementById("circle").style.top = "calc(100vh * " +randPositionTop + ")"
-	document.getElementById("circle").style.left = "calc(100vw * " +randPositionLeft + ")"
+	document.getElementById("circle").style.top = "" + (100 * randPositionTop) + "%"
+	document.getElementById("circle").style.left = "" + (100 * randPositionLeft) + "%"
 	document.getElementById("circle").style.height = (75 * randSize) + "px"
 	document.getElementById("circle").style.width = (75 * randSize) + "px"
 }
